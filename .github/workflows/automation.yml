@@ -1,0 +1,14 @@
+name: Notify on Push
+
+on:
+  push:
+    branches:
+      - main
+      - '*'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification
+        run: echo "A push has been made to the repository!"
